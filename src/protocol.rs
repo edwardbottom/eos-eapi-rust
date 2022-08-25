@@ -32,7 +32,7 @@ use super::{Response, ResultFormat};
 use std::os::unix::prelude::*;
 use thiserror::Error;
 
-static SERVER_PATH: &str = "/CliServer/";
+static SERVER_PATH: &str = "/var/run/command-api.sock";
 static ARG_STRING: &[u8] = b"-A\x00-p=15\x00-s=";
 static ENV_VARS: [&str; 9] = [
     "LOGNAME",

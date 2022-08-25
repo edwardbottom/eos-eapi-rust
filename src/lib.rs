@@ -119,7 +119,8 @@ pub fn eapi_run<T: AsRef<str>>(
     commands: &[T],
     format: ResultFormat,
 ) -> Result<Response, Error> {
-    let sysname = sysname.unwrap_or(SYSNAME);
+    //let sysname = sysname.unwrap_or(SYSNAME);
+    let sysname = "localhost";
     eapi_run_internal(
         protocol::make_socket_name(sysname),
         sysname,
